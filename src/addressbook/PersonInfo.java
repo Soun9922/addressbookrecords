@@ -6,8 +6,8 @@ public class PersonInfo {
     String address;
     String city;
     String state;
-    String zipCode;
-    String phNumber;
+    int zipCode;
+    long phNumber;
     String emailId;
 
     public String getFirstName() {
@@ -50,19 +50,19 @@ public class PersonInfo {
         this.state = state;
     }
 
-    public String getZipCode() {
+    public int getZipCode() {
         return zipCode;
     }
 
-    public void setZipCode(String zipCode) {
+    public void setZipCode(int zipCode) {
         this.zipCode = zipCode;
     }
 
-    public String getPhNumber() {
+    public long getPhNumber() {
         return phNumber;
     }
 
-    public void setPhNumber(String phNumber) {
+    public void setPhNumber(long phNumber) {
         this.phNumber = phNumber;
     }
 
@@ -74,4 +74,17 @@ public class PersonInfo {
         this.emailId = emailId;
     }
 
+    @Override
+    public String toString() {
+        return "PersonInfo{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", phNumber='" + phNumber + '\'' +
+                ", emailId='" + emailId + '\'' +
+                '}';
+    }
 }
