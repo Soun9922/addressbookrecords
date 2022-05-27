@@ -73,4 +73,5 @@ public class PersonInfo {
     public void setEmailId(String emailId) {
         this.emailId = emailId;
     }
+
 }
