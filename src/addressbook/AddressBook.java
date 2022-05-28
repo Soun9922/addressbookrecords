@@ -92,7 +92,19 @@ public class AddressBook {
             System.out.println("Name : " + personInfoEdit.getFirstName() + " " + personInfoEdit.getLastName() + "\n" + "Address : " + personInfoEdit.getAddress() + "\n" + "City : " + personInfoEdit.getCity() + "\n" + "State : " + personInfoEdit.getState() + "\n" + "Zip : " + personInfoEdit.getZipCode() + "\n" + "Mobile Number : " + personInfoEdit.getPhNumber() + "\n" + "EmailId : " + personInfoEdit.getEmailId() + "\n");
         }
     }
-
+    void deleteDetails() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name to be deleted: ");
+        String deleteName = sc.next();
+        Iterator<PersonInfo> personInfoIterator = persons.listIterator();
+        while (personInfoIterator.hasNext()){
+            PersonInfo personInfoDelete = personInfoIterator.next();
+            if (deleteName.equals(personInfoDelete.getFirstName())){
+                persons.remove(personInfo);
+                System.out.println("Your contact details have been deleted");
+            }
+        }
+    }
     void printDetails() {
         System.out.println(" These are the Contact Details \n");
         System.out.println("Name : " + personInfo.getFirstName() + " " + personInfo.getLastName() + "\n" + "Address : " + personInfo.getAddress() + "\n" + "City : " + personInfo.getCity() + "\n" + "State : " + personInfo.getState() + "\n" + "Zip : " + personInfo.getZipCode() + "\n" + "Mobile Number : " + personInfo.getPhNumber() + "\n" + "EmailId : " + personInfo.getEmailId() + "\n");
