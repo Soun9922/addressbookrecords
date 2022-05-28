@@ -36,7 +36,7 @@ public class AddressBook {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the first name of the contact to be edited: ");
         String firstName = sc.next();
-        Iterator <PersonInfo> iterator = persons.listIterator();
+        Iterator<PersonInfo> iterator = persons.listIterator();
         boolean loopTerminal = true;
         while (iterator.hasNext()) {
             PersonInfo personInfoEdit = iterator.next();
@@ -91,11 +91,6 @@ public class AddressBook {
             }
             System.out.println("Name : " + personInfoEdit.getFirstName() + " " + personInfoEdit.getLastName() + "\n" + "Address : " + personInfoEdit.getAddress() + "\n" + "City : " + personInfoEdit.getCity() + "\n" + "State : " + personInfoEdit.getState() + "\n" + "Zip : " + personInfoEdit.getZipCode() + "\n" + "Mobile Number : " + personInfoEdit.getPhNumber() + "\n" + "EmailId : " + personInfoEdit.getEmailId() + "\n");
         }
-    }
-
-    void deleteDetails() {
-        System.out.println("Your contact details have been deleted");
-        persons.remove(personInfo);
     }
 
     void printDetails() {
