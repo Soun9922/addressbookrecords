@@ -31,18 +31,31 @@ public class AddressBook {
         persons.add(personInfo);
         printDetails();
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> UC4_abilitytodelete
     void editDetails() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the first name of the contact to be edited: ");
         String firstName = sc.next();
         Iterator<PersonInfo> iterator = persons.listIterator();
         boolean loopTerminal = true;
+<<<<<<< HEAD
         while (iterator.hasNext()){
             PersonInfo personInfoEdit = iterator.next();
             if (firstName.equals(personInfoEdit.getFirstName())){
                 System.out.println("Which section you want to update \n 1.FirstName \n 2.LastName \n 3.Address \n 4.City \n 5.State \n 6.ZipCode \n 7.PhoneNumber \n 8.EmailID \n 9.Exit main menu: ");
                 int choice = sc.nextInt();
                 switch (choice){
+=======
+        while (iterator.hasNext()) {
+            PersonInfo personInfoEdit = iterator.next();
+            if (firstName.equals(personInfoEdit.getFirstName())) {
+                System.out.println("Which section you want to update \n 1.FirstName \n 2.LastName \n 3.Address \n 4.City \n 5.State \n 6.ZipCode \n 7.PhoneNumber \n 8.EmailID \n 9.Exit main menu: ");
+                int choice = sc.nextInt();
+                switch (choice) {
+>>>>>>> UC4_abilitytodelete
                     case 1:
                         System.out.println("Enter the First Name: ");
                         String newFirstName = sc.next();
@@ -87,6 +100,7 @@ public class AddressBook {
                         loopTerminal = false;
                         break;
                 }
+<<<<<<< HEAD
                 System.out.println("\t"+personInfoEdit.getFirstName()+"\t");
             }
         }
@@ -95,18 +109,41 @@ public class AddressBook {
     void deleteDetails() {
         System.out.println("Your contact details have been deleted");
         persons.remove(personInfo);
+=======
+            }
+            System.out.println("Name : " + personInfoEdit.getFirstName() + " " + personInfoEdit.getLastName() + "\n" + "Address : " + personInfoEdit.getAddress() + "\n" + "City : " + personInfoEdit.getCity() + "\n" + "State : " + personInfoEdit.getState() + "\n" + "Zip : " + personInfoEdit.getZipCode() + "\n" + "Mobile Number : " + personInfoEdit.getPhNumber() + "\n" + "EmailId : " + personInfoEdit.getEmailId() + "\n");
+        }
+    }
+    void deleteDetails() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name to be deleted: ");
+        String deleteName = sc.next();
+        Iterator<PersonInfo> personInfoIterator = persons.listIterator();
+        while (personInfoIterator.hasNext()){
+            PersonInfo personInfoDelete = personInfoIterator.next();
+            if (deleteName.equals(personInfoDelete.getFirstName())){
+                persons.remove(personInfo);
+                System.out.println("Your contact details have been deleted");
+            }
+        }
+>>>>>>> UC4_abilitytodelete
     }
 
     void printDetails() {
         System.out.println(" These are the Contact Details \n");
         System.out.println("Name : " + personInfo.getFirstName() + " " + personInfo.getLastName() + "\n" + "Address : " + personInfo.getAddress() + "\n" + "City : " + personInfo.getCity() + "\n" + "State : " + personInfo.getState() + "\n" + "Zip : " + personInfo.getZipCode() + "\n" + "Mobile Number : " + personInfo.getPhNumber() + "\n" + "EmailId : " + personInfo.getEmailId() + "\n");
+<<<<<<< HEAD
     }
     void displayDetails(){
         System.out.println(" These are the Contact Details \n");
         System.out.println("Name : " + personInfo.getFirstName() + " " + personInfo.getLastName() + "\n" + "Address : " + personInfo.getAddress() + "\n" + "City : " + personInfo.getCity() + "\n" + "State : " + personInfo.getState() + "\n" + "Zip : " + personInfo.getZipCode() + "\n" + "Mobile Number : " + personInfo.getPhNumber() + "\n" + "EmailId : " + personInfo.getEmailId() + "\n");
     }
+=======
+>>>>>>> UC4_abilitytodelete
 
+    }
 }
+
 
 
 
